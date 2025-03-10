@@ -1,0 +1,45 @@
+[
+    {
+      "image": "img/racaoGato.png",
+      "price": "₦15,000.00",
+      "title": "Multivitamin For Cat",
+      "token" : "cat",
+      "description": "Suplemento vitamínico para gatos, ajudando na saúde e energia diária."
+    },
+    {
+      "image": "img/racaogato2.png",
+      "price": "₦15,000.00",
+      "title": "Cat Food",
+      "token" : "cat",
+      "description": "Alimento balanceado para gatos, com nutrientes essenciais para o crescimento saudável."
+    },
+    {
+      "image": "img/racaoCachorro.png",
+      "price": "₦15,000.00",
+      "title": "Dog Food",
+      "token" : "dog",
+      "description": "Ração premium para cães, com ingredientes naturais e ricos em proteínas."
+    },
+    {
+      "image": "img/waterDog.png",
+      "price": "₦15,000.00",
+      "title": "Dog Water",
+      "token" : "dog",
+      "description": "Água mineral para cães, garantindo hidratação pura e saudável."
+    },
+    {
+      "image": "img/waterBird.png",
+      "price": "₦15,000.00",
+      "title": "Bird Water",
+      "token" : "bird",
+      "description": "Água enriquecida para pássaros, ideal para manter a saúde e bem-estar."
+    },
+    {
+      "image": "img/potes.png",
+      "price": "₦15,000.00",
+      "title": "Pet Plate",
+      "token" : "fish",
+      "description": "Tigelas para pets com design exclusivo, feitas para facilitar a alimentação."
+    }
+  ]
+  

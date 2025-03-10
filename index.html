@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/patinhas.png" type="image/x-icon">
   <title>Paws n'Play</title>
 </head>
 
@@ -16,8 +17,8 @@
           <img id="logoImg" src="img/patinhasWhite.png" alt="" />
           <p>Paws n'Play</p>
         </div>
-          <nav>
-          <img src="img/menu.png"  width="24px" height="24px"  alt="">
+        <nav>
+          <img src="img/menu.png" id="menuH" width="24px" height="24px" alt="">
           <ul class="">
             <li class="dropdown">
               <p>Shop <img src="img/arrowD.png" width="20px" height="20px" alt=""></p>
@@ -30,7 +31,8 @@
               </ul>
             </li>
             <li>
-              <p style="display: flex; align-items: center; gap: 7px;">Services <img src="img/arrowD.png" width="20px" height="20px" alt=""></p>
+              <p style="display: flex; align-items: center; gap: 7px;">Services <img src="img/arrowD.png" width="20px"
+                  height="20px" alt=""></p>
               <ul>
                 <li></li>
               </ul>
@@ -66,44 +68,74 @@
       </button>
     </div>
   </section>
+
   <main>
     <section id="shop">
-      <div>
-        <img src="img/patinhas.png" alt="" />
-        <h3>Shop</h3>
+      <div class="shopHeader">
+        <div class="titulo">
+          <img src="img/patinhas.png" alt="" />
+          <h3>Shop</h3>
+        </div>
+        <div class="searchT">
+          <button>
+            <img src="img/search.png" width="24px" alt="" />
+          </button>
+        </div>
       </div>
       <div class="line"></div>
-      <div>
-        <div>
-          <h1>Featured Products</h1>
-
-          <nav>
-            <img src="img/search.png" alt="" />
-            <p>Search</p>
+      <div class="containerProducts">
+        <div class="filters">
+          <div class="Featured">
+            <h1>Featured Products</h1>
+  
+            <nav class="search">
+              <img src="img/search.png" class="search" width="24px" alt="" />
+              <input type="search" placeholder="Search" class="search" name="search" id="search">
+            </nav>
+          </div>
+  
+          <nav class="categoriesNav">
+            <ul class="categories">
+              <li class="selected">
+                <p>Random</p>
+              </li>
+              <li>
+                <p>Cat</p>
+              </li>
+              <li>
+                <p>Dogs</p>
+              </li>
+              <li>
+                <p>Fish</p>
+              </li>
+              <li>
+                <p>Bird</p>
+              </li>
+            </ul>
           </nav>
         </div>
-
-        <nav>
-          <ul>
-            <li>
-              <p>Random</p>
-            </li>
-            <li>
-              <p>Cat</p>
-            </li>
-            <li>
-              <p>Dogs</p>
-            </li>
-            <li>
-              <p>Fish</p>
-            </li>
-            <li>
-              <p>Bird</p>
-            </li>
-          </ul>
-        </nav>
-        <div id="products"></div>
-        View More >>>
+        <div id="products">
+          <!-- <div class="card">
+            <img id="cardImg" src="img/racaoCachorro.png" alt="">
+            <div class="CardHead">
+              <p>₦15,000.00</p>
+              <img src="img/heart.png" width="30px" height="30px" alt="">
+            </div>
+            <div class="CardInfo">
+              <h3>Dog Food</h3>
+              <p>Lorem ipsum dolor sit amet consectetur. Vitae donec pellentesque ut eget tempor egestas diam.</p>
+            </div>
+            <div class="CardButton">
+              <div class="counter">
+                <button id="plus">+</button>
+                <p id="counter">1</p>
+                <button id="less">-</button>
+              </div>
+              <button type="button" class="addToCart">Add to Cart</button>
+            </div>
+          </div> -->
+        </div>
+        <p class="end">View More >>></p>
       </div>
     </section>
 
@@ -282,80 +314,81 @@
       </div>
     </section>
     <div class="line2"></div>
-    <footer>
-      <div>
-        <p>Join our newsletter</p>
-        <p>Be the first to receive latest updates on promo, sales and offers</p>
-        <form>
-          <input type="text" placeholder="Enter your email">
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
-      <div>
-        <div>
-          <div>
-            <img src="img/patinhasWhite.png" alt="">
-            Paws n’ Play
-          </div>
-          <p>Where wagging tails and purring hearts reign supreme!</p>
-        </div>
-        <div>
-          <h6>Shop</h6>
-          <p>Pet Adoption</p>
-          <p>Nutrition</p>
-          <p>Pet Care</p>
-          <p>Pet Food</p>
-          <p>Pricing</p>
-        </div>
-        <div>
-          <h6>Company</h6>
-          <p>About Us</p>
-          <p>Careers</p>
-          <p>Press</p>
-          <p>News</p>
-          <p>Contact</p>
-        </div>
-        <div>
-          <h6>Services</h6>
-          <p>Grooming</p>
-          <p>Boarding</p>
-          <p>Training</p>
-          <p>Veterinary</p>
-          <p>Support</p>
-        </div>
-        <div>
-          <h6>Social</h6>
-          <p>Twitter</p>
-          <p>Linkedin</p>
-          <p>Facebook</p>
-          <p>AngeList</p>
-          <p>Dribbble</p>
-        </div>
-        <div>
-          <h6>Legal</h6>
-          <p>Terms</p>
-          <p>Privacy</p>
-          <p>Cookies</p>
-          <p>Licenses</p>
-          <p>Settings</p>
-        </div>
-      </div>
-      <div class="lineWhite"> </div>
-      <div>
-        <div>
-          <p>© 2024 Paws n’ Play. All rights reserved.</p>
-        </div>
-        <div>
-          <img src="img/XWhite.png" width="24px" height="24px  alt="">
-          <img src=" img/linkedinWhite.png" width="24px" height="24px alt="">
-          <img src=" img/facebookWhite.png" width="24px" height="24px alt="">
-          <img src=" img/githubWhite.png" width="24px" height="24px alt="">
-          <img src=" img/paz.png" width="24px" height="24px alt="">
-          <img src=" img/bolaWhite.png" width="24px" height="24px alt="">
-        </div>
-      </div>
-    </footer>
   </main>
+  <footer>
+    <div>
+      <p>Join our newsletter</p>
+      <p>Be the first to receive latest updates on promo, sales and offers</p>
+      <form>
+        <input type="text" placeholder="Enter your email">
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
+    <div>
+      <div>
+        <div>
+          <img src="img/patinhasWhite.png" alt="">
+          Paws n’ Play
+        </div>
+        <p>Where wagging tails and purring hearts reign supreme!</p>
+      </div>
+      <div>
+        <h6>Shop</h6>
+        <p>Pet Adoption</p>
+        <p>Nutrition</p>
+        <p>Pet Care</p>
+        <p>Pet Food</p>
+        <p>Pricing</p>
+      </div>
+      <div>
+        <h6>Company</h6>
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Press</p>
+        <p>News</p>
+        <p>Contact</p>
+      </div>
+      <div>
+        <h6>Services</h6>
+        <p>Grooming</p>
+        <p>Boarding</p>
+        <p>Training</p>
+        <p>Veterinary</p>
+        <p>Support</p>
+      </div>
+      <div>
+        <h6>Social</h6>
+        <p>Twitter</p>
+        <p>Linkedin</p>
+        <p>Facebook</p>
+        <p>AngeList</p>
+        <p>Dribbble</p>
+      </div>
+      <div>
+        <h6>Legal</h6>
+        <p>Terms</p>
+        <p>Privacy</p>
+        <p>Cookies</p>
+        <p>Licenses</p>
+        <p>Settings</p>
+      </div>
+    </div>
+    <div class="lineWhite"> </div>
+    <div>
+      <div>
+        <p>© 2024 Paws n’ Play. All rights reserved.</p>
+      </div>
+      <div>
+        <img src="img/XWhite.png" width="24px" height="24px  alt="">
+        <img src=" img/linkedinWhite.png" width="24px" height="24px alt="">
+        <img src=" img/facebookWhite.png" width="24px" height="24px alt="">
+        <img src=" img/githubWhite.png" width="24px" height="24px alt="">
+        <img src=" img/paz.png" width="24px" height="24px alt="">
+        <img src=" img/bolaWhite.png" width="24px" height="24px alt="">
+      </div>
+    </div>
+  </footer>
+  <script src=" script.js"></script>
 </body>
 
 </html>
