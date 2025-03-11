@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", function () {
       categoryItems.forEach((i) => i.classList.remove("selected"));
       this.classList.add("selected");
+      const token = this.getAttribute("token");
+      loadProducts(token === "Random" ? null : token);
     });
   });
 
@@ -55,22 +57,30 @@ function createProductCard(product) {
 }
 
 const container = document.getElementById("products");
+let allProducts = [];
 
-function loadProducts() {
-  fetch("products.json") 
-    .then(response => {
+function loadProducts(categoryToken = null) {
+  fetch("products.json")
+    .then((response) => {
       if (!response.ok) {
         throw new Error("Erro ao carregar os produtos.");
       }
       return response.json();
     })
-    .then(products => {
-      products.forEach((product) => {
+    .then((products) => {
+      allProducts = products;
+      container.innerHTML = "";
+      const filteredProducts = categoryToken
+        ? products.filter((product) => product.token === categoryToken)
+        : products;
+
+      filteredProducts.forEach((product) => {
         const card = createProductCard(product);
         container.appendChild(card);
       });
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Erro ao carregar os produtos:", error);
     });
 }
+

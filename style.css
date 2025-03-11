@@ -519,7 +519,6 @@ ul {
 }
 .filters {
   display: flex;
-
   gap: 10px;
   flex-direction: column;
   margin: 10px;
@@ -528,6 +527,60 @@ ul {
 .searchT {
   display: none;
 }
+#SectionServices{
+  padding: 70px 80px 70px 80px;
+  gap: 10px;
+}
+.servicesHeader {
+  gap: 10px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.service p, .service button{
+  display: none;
+}
+
+.service {
+  position: relative;
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+}
+.containerServices{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 350px;
+  gap: 20px;
+}
+.containerServices:nth-child(3) {
+  grid-column: span 2; 
+  grid-row: span 2; 
+}
+
+.service h2 {
+  z-index: 10;
+}
+
+.service img {
+  z-index: -10;
+  position: absolute;
+  max-width: 409px;
+  max-height: 715px;
+}
+
+
+.service h2{
+  z-index: 10;
+}
+.service img{ 
+  z-index: -10;
+  position: absolute;
+  max-width: 409px;
+  max-height: 715px;
+}
+
 @media screen and (max-width: 600px) {
   header ul,
   header button {
