@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Dr. Olivia",
+      "position": "Senior Veterinarian",
+      "picture": "Olivia.jpg"
+    },
+    {
+      "name": "Dr. Sophia",
+      "position": "Wildlife Veterinarian",
+      "picture": "Sophia.png"
+    },
+    {
+      "name": "Dr. Noah",
+      "position": "Intern Veterinarian",
+      "picture": "Demi.jpg"
+    },
+    {
+      "name": "Lana Steiner",
+      "position": "Resident Veterinarian",
+      "picture": "LanaSteiner.jpg"
+    },
+    {
+        "name": "Phoenix Baker",
+        "position": "Asst. Veterinarian",
+        "picture": "PhoenixBaker.jpg"
+    }
+  ]
+  

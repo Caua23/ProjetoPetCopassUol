@@ -87,19 +87,19 @@
         <div class="filters">
           <div class="Featured">
             <h1>Featured Products</h1>
-  
+
             <nav class="search">
               <img src="img/search.png" class="search" width="24px" alt="" />
               <input type="search" placeholder="Search" class="search" name="search" id="search">
             </nav>
           </div>
-  
+
           <nav class="categoriesNav">
             <ul class="categories">
               <li token="Random" class="selected">
                 <p>Random</p>
               </li>
-              <li token="cat" >
+              <li token="cat">
                 <p>Cat</p>
               </li>
               <li token="dog">
@@ -146,7 +146,7 @@
       </div>
       <div class="line"></div>
       <div class="containerServices">
-        
+
         <div class="service">
           <img src="img/Grooming.png" alt="">
           <h2>Grooming</h2>
@@ -163,7 +163,7 @@
           </p>
           <button>Learn More</button>
         </div>
-        <div class="service">
+        <div class="service" id="adoption">
           <img src="img/adoption.png" alt="">
           <h2>Adoption</h2>
           <p>
@@ -171,7 +171,8 @@
           </p>
           <button>Learn More</button>
         </div>
-        <div class="service" >
+
+        <div class="service">
           <img src="img/veterinary.png" alt="">
           <h2>Veterinary</h2>
           <p>
@@ -187,55 +188,68 @@
           </p>
           <button>Learn More</button>
         </div>
-        
+        <div class="service" id="adoption2">
+          <img src="img/adoption.png" alt="">
+          <h2>Adoption</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <button>Learn More</button>
+        </div>
       </div>
     </section>
-    <section>
-      <div>
-        <img src="img/patinhas.png" alt="" />
+    <section id="AboutUs">
+      <div class="AboutHeader">
+        <img src="img/patinhas.png" height="32px" width="32px" alt="" />
         <h3>About Us</h3>
       </div>
-      <div>
+      <div class="line"></div>
+      <div class="about">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et dolor
-          cum hic repellat accusamus, quae debitis saepe porro maxime eius
-          optio unde minus exercitationem tempora aspernatur delectus
-          necessitatibus doloremque ex? Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Libero possimus consequatur debitis ab
-          deleniti enim dolore ea alias necessitatibus maiores illum non quam,
-          sapiente facilis culpa, nesciunt dicta impedit reprehenderit?
+          At Paws n’ Play, our journey began with a simple yet profound love for animals. Inspired by the unwavering
+          companionship and joy they bring to our lives, we embarked on a mission to create a haven where pets and their
+          owners alike could experience unparalleled happiness and care.
+          <br>
+          <br>
+          Driven by our passion for animal welfare, we hand-select each product and service with meticulous attention to
+          quality and sustainability. From nutritious food and enriching toys to expert grooming and healthcare, every
+          offering is carefully curated to meet the unique needs of our beloved furry friends.
+          <br>
+          <br>
+          But our commitment doesn't end there. We're dedicated to fostering a community that celebrates the bond
+          between pets and their human companions. Through educational resources, compassionate support, and memorable
+          experiences, we strive to empower pet owners to provide the best possible care for their furry family members.
+          <br>
+          <br>
+          At Paws n’ Play, customer satisfaction isn't just a goal – it's our guiding principle. We go above and beyond
+          to ensure every interaction leaves tails wagging and hearts smiling. From personalized recommendations to
+          attentive service, we're here to make your journey with your pet as joyful and fulfilling as possible.
+          <br>
+          <br>
+          Join us in our mission to create a world where every pet is cherished, every need is met, and every tail wags
+          with happiness. Welcome to Paws n’ Play, where pets are family, and love knows no bounds.
         </p>
         <img src="img/AboutUs.png" alt="" />
       </div>
     </section>
-    <section>
-      <div>
-        <img src="img/patinhas.png" alt="" />
+
+    <section id="team">
+      <div class="teamHeader">
+        <img src="img/patinhas.png" height="32px" width="32px" alt="" />
         <h3>Our Team</h3>
       </div>
       <div class="line"></div>
-      <div>
-        <div>
-          <img src="img/Olivia.jpg" alt="" />
-          <p>Dr. Olivia</p>
-          <p>Senior veterinarian</p>
-          <div>
-            <img src="img/X.png" width="24px" height="24px" alt="" />
-            <img src="img/linkedin.png" width="24px" height="24px" alt="" />
-            <img src="img/bola.png" width="24px" height="24px" alt="" />
-          </div>
-        </div>
-      </div>
+      <div id="profile"></div>
     </section>
 
-    <section>
-      <div>
-        <img src="img/patinhas.png" alt="" />
+    <section id="blog">
+      <div class="BlogHeader">
+        <img src="img/patinhas.png" height="32px" width="32px" alt="" />
         <h3>Blog</h3>
       </div>
       <div class="line"></div>
-      <div>
-        <div>
+      <div id="info">
+        <div class="infoText">
           <h1>Milestone: 20,000 Pets Treated</h1>
           <p>
             Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat
@@ -261,31 +275,37 @@
         <img src="img/blog.png" alt="" />
       </div>
     </section>
-    <section>
-      <div>
-        <img src="img/patinhas.png" alt="" />
+
+    <section id="GetInTouch">
+      <div class="GetHeader">
+        <img src="img/patinhasWhite.png" height="32px" width="32px" alt="" />
         <h3>Get in touch</h3>
       </div>
       <div class="line"></div>
 
-      <div>
+      <div class="GetForm">
         <form action="">
-          <div>
-            <label for="firstName">Firts Name</label>
-            <input name="firstName" id="firstName" placeholder="firts name" type="text" />
-            <label for="lastName">Last Name</label>
-            <input name="lastName" id="lastName" placeholder="last name" type="text" />
+          <div class="namesInput">
+            <div>
+              <label for="">Firts Name</label>
+              <input name="firstName" id="firstName" placeholder="firts name" type="text" />
+            </div>
+            <div>
+              <label for="">Last Name</label>
+              <input name="lastName" id="lastName" placeholder="last name" type="text" />
+            </div>
           </div>
-          <div>
-            <label for="email">Email</label>
+
+          <div class="divEmail">
+            <label for="">Email</label>
             <input type="text" id="email" name="email" />
           </div>
-          <div>
-            <label for="msg">Message</label>
+          <div class="msgTextArea">
+            <label for="">Message</label>
             <textarea name="msg" id="msg"></textarea>
           </div>
-          <div>
-            <input type="radio" name="" id="" />
+          <div class="Confirm">
+            <input type="radio" name="" id="" checked="checked" />
             <label for="">You agree to our friendly privacy policy.</label>
           </div>
           <button type="submit">Send Menssage</button>
