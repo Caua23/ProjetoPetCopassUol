@@ -221,10 +221,6 @@ li:hover {
   font-weight: 600;
 }
 
-section {
-  height: 1016px;
-}
-
 .line {
   display: flex;
   align-items: center;
@@ -908,7 +904,7 @@ ul {
 
 #GetInTouch {
   background: #101828;
-  padding: 70px;
+  padding: 32px;
   gap: 64px;
   color: white;
 }
@@ -921,24 +917,40 @@ ul {
   margin-bottom: 10px;
 }
 
+.GetForm {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
 .GetForm form {
   background-color: white;
   width: 576px;
   height: 494px;
-  gap: 64px;
   padding: 40px 32px 40px 32px;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
+
 .namesInput {
   display: flex;
+  gap: 32px;
 }
+
 .namesInput div {
   display: flex;
   flex-direction: column;
 }
+
 .namesInput input {
-  width: 224;
-  height: 48;
+  width: 224px;
+  height: 48px;
   gap: 8px;
   padding-top: 12px;
   padding-right: 16px;
@@ -948,6 +960,7 @@ ul {
   border-width: 1px;
   border: 1px solid #d0d5dd;
 }
+
 label {
   font-weight: 500;
   font-size: 14px;
@@ -960,9 +973,10 @@ label {
   display: flex;
   flex-direction: column;
 }
+
 .divEmail input {
-  width: 480;
-  height: 48;
+  width: 480px;
+  height: 48px;
   gap: 8px;
   padding-top: 12px;
   padding-right: 16px;
@@ -977,9 +991,10 @@ label {
   display: flex;
   flex-direction: column;
 }
+
 .msgTextArea textarea {
-  width: 480;
-  height: 128;
+  width: 480px;
+  height: 128px;
   gap: 8px;
   padding-top: 10px;
   padding-right: 14px;
@@ -991,10 +1006,16 @@ label {
   border: 1px solid #d0d5dd;
 }
 
+.Confirm {
+  display: flex;
+  align-items: center;
+  margin-right: 170px;
+  gap: 10px;
+}
+
 .Confirm input {
   width: 20px;
   height: 20px;
-  background: none;
 }
 
 .GetForm form button {
@@ -1014,10 +1035,200 @@ label {
   color: white;
 }
 
-footer {
-  background-color: #101828;
+.containerInformation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
 }
 
+.containerInformation .contact {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.containerInformation .contact div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.Textgray {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #cecece;
+}
+
+.textImportant {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.TextInfoF {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.newsletter {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+.newsletter div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleNew {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+.sub {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: #cecece;
+}
+
+footer form input[type="email"] {
+  width: 280;
+  height: 44;
+  gap: 8px;
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  border-radius: 8px;
+  border-width: 1px;
+  background: #dedede;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  border: 1px solid #d0d5dd;
+  color: #667085;
+}
+
+footer form input[type="submit"] {
+  width: 115;
+  height: 44;
+  gap: 8px;
+  padding-top: 10px;
+  padding-right: 18px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  border-radius: 8px;
+  border-width: 1px;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  border: 1px solid #d0d5dd;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.line2 {
+  background-color: #cecece;
+  width: 100%;
+  height: 1px;
+}
+
+.flexFooter {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.logoFooter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.textFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textFooter p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #cecece;
+  width: 320px;
+}
+
+.flexFooter nav {
+  display: flex;
+  gap: 50px;
+}
+
+.NavF {
+  display: flex;
+  flex-direction: column;
+  width: 141;
+  height: 204;
+  gap: 16px;
+}
+
+.NavF h6 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.NavF p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #cecece;
+  cursor: pointer;
+}
+
+footer {
+  height: 601px;
+  background-color: #101828;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.final {
+  border-top: 1px #cecece80 solid;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 1216px;
+  height: 57px;
+  gap: 32px;
+  padding-right: 32px;
+  padding-left: 32px;
+  align-items: center;
+}
+.icons img {
+  cursor: pointer;
+}
 @media screen and (max-width: 600px) {
   header ul,
   header button {
@@ -1462,5 +1673,124 @@ footer {
       #243961 -2.52%,
       #101828 99.06%
     );
+  }
+
+  #GetInTouch {
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    padding-top: 40px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+    padding-left: 16px;
+  }
+
+  #GetInTouch .line {
+    width: 100%;
+  }
+  .containerInformation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+  }
+  .GetForm {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .GetForm form {
+    margin-top: 50px;
+    width: 357px;
+    height: 379px;
+    gap: 15px;
+    padding-top: 26.2px;
+    padding-right: 20.96px;
+    padding-bottom: 26.2px;
+    padding-left: 20.96px;
+    border-radius: 10.48px;
+  }
+  .namesInput {
+    gap: 21px;
+  }
+  .namesInput div input {
+    width: 147px;
+    height: 32px;
+    gap: 5.24px;
+    padding-top: 7.86px;
+    padding-right: 10.48px;
+    padding-bottom: 7.86px;
+    padding-left: 10.48px;
+    border-radius: 5.24px;
+    border-width: 0.66px;
+  }
+
+  .divEmail input {
+    width: 315px;
+    height: 32px;
+    gap: 5.24px;
+    padding-top: 7.86px;
+    padding-right: 10.48px;
+    padding-bottom: 7.86px;
+    padding-left: 10.48px;
+    border-radius: 5.24px;
+    border-width: 0.66px;
+  }
+
+  .msgTextArea #msg {
+    width: 315px;
+    height: 83px;
+    gap: 5.24px;
+    padding-top: 6.55px;
+    padding-right: 9.17px;
+    padding-bottom: 6.55px;
+    padding-left: 9.17px;
+    border-radius: 5.24px;
+    border-width: 0.66px;
+  }
+  .GetForm form button {
+    width: 315px;
+    height: 50px;
+    border-radius: 6px;
+  }
+  .Confirm {
+    margin: 0;
+    margin-left: 15px;
+  }
+  .Confirm label {
+    width: 294px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15.72px;
+    letter-spacing: 0%;
+  }
+  .line{
+    width: 100%;
+  }
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+  .textImportant {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+  .Textgray {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0%;
+  }
+
+  .TextInfoF {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0%;
   }
 }
