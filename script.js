@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   loadProducts();
-  loadProfile(); 
+  loadProfile();
 });
 
 function createProfileCard(worker) {
@@ -42,7 +42,7 @@ function loadProfile() {
       return response.json();
     })
     .then((workers) => {
-      profileContainer.innerHTML = ""; 
+      profileContainer.innerHTML = "";
       workers.forEach((worker) => {
         const card = createProfileCard(worker);
         profileContainer.appendChild(card);
@@ -122,4 +122,58 @@ function loadProducts(categoryToken = null) {
     .catch((error) => {
       console.error("Erro ao carregar os produtos:", error);
     });
+}
+function sendEmail(event){
+  event.preventDefault();
+  const email = document.getElementById("email2").value;
+  const res = document.getElementById("res2");
+  const erro = document.getElementById("erro2");
+  if (email) {
+    erro.innerHTML = "";
+    return (res.innerHTML = "Email Salvo com sucesso!");
+  }
+  if (!email) {
+    res.innerHTML = "";
+    return (erro.innerHTML = "Preencha o campo email");
+  }
+}
+function sendForm(event) {
+  event.preventDefault();
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("msg").value;
+  const res = document.getElementById("res");
+  const erro = document.getElementById("erro");
+
+  if (firstName && lastName && email && message) {
+    erro.innerHTML = "";
+    return (res.innerHTML = "Mensagem enviada com sucesso!");
+  }
+
+  if (!firstName) {
+    res.innerHTML = "";
+    return (erro.innerHTML = "Preencha o campo First Name");
+  }
+
+  if (!lastName) {
+    res.innerHTML = "";
+    return (erro.innerHTML = "Preencha o campo Last Name");
+  }
+  if (!email) {
+    res.innerHTML = "";
+    return (erro.innerHTML = "Preencha o campo email");
+  }
+
+  if (!message) {
+    res.innerHTML = "";
+    return (erro.innerHTML = "Preencha o campo message");
+  }
+
+
+if(!firstName && !lastName && !email && !message){
+  erro.innerHTML = "";
+  return (res.innerHTML = "Preencha os campos");
+}
+
 }
