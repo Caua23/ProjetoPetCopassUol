@@ -14,7 +14,7 @@
     <header>
       <div id="logo">
         <div style="display: flex; align-items: center; gap: 7px;">
-          <img id="logoImg" src="img/patinhasWhite.png" alt="" />
+          <img id="logoImg" src="img/patinhasWhite.png" width="32px" alt="" />
           <p>Paws n'Play</p>
         </div>
         <nav>
@@ -284,7 +284,7 @@
       <div class="line"></div>
 
       <div class="GetForm">
-        <form action="">
+        <form onsubmit="sendForm(event); return false;">
           <div class="namesInput">
             <div>
               <label for="">Firts Name</label>
@@ -298,16 +298,18 @@
 
           <div class="divEmail">
             <label for="">Email</label>
-            <input type="text" id="email" name="email" />
+            <input type="email" id="email" name="email" />
           </div>
           <div class="msgTextArea">
             <label for="">Message</label>
             <textarea name="msg" id="msg"></textarea>
           </div>
           <div class="Confirm">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check" />
             <label for="">You agree to our friendly privacy policy.</label>
           </div>
+          <p id="res"></p>
+          <p id="erro"></p>
           <button type="submit">Send Menssage</button>
         </form>
         <div class="containerInformation">
@@ -350,9 +352,13 @@
         <p class="titleNew">Join our newsletter</p>
         <p class="sub">Be the first to receive latest updates on promo, sales and offers</p>
       </div>
-      <form>
-        <input type="email" placeholder="Enter your email">
-        <input type="submit" value="Subscribe">
+      <form onsubmit="sendEmail(event); return false;" class="formEmail" >
+        <div>
+          <input type="email" id="email2"  placeholder="Enter your email">
+          <input type="submit" value="Subscribe">
+        </div>
+        <p id="res2"></p>
+        <p id="erro2"></p>
       </form>
     </div>
     <div class="flexFooter m-10">
@@ -406,7 +412,7 @@
         </div>
       </nav>
     </div>
-    <div class="lineWhite"> </div>
+    
     <div class="final">
       <div>
         <p>© 2024 Paws n’ Play. All rights reserved.</p>
