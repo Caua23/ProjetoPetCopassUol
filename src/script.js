@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const categoryItems = document.querySelectorAll(".categories li");
 
+  const menuIcon = document.getElementById("menuH");
+  const navMenu = document.getElementById("navMenu");
+
+  menuIcon.addEventListener("click", function () {
+    navMenu.classList.toggle("active"); 
+  });
+
   categoryItems.forEach((item) => {
     item.addEventListener("click", function () {
       categoryItems.forEach((i) => i.classList.remove("selected"));
@@ -34,7 +41,7 @@ function createProfileCard(worker) {
 const profileContainer = document.getElementById("profile");
 
 function loadProfile() {
-  fetch("worker.json")
+  fetch("src/worker.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Erro ao carregar os perfis.");
@@ -100,7 +107,7 @@ const container = document.getElementById("products");
 let allProducts = [];
 
 function loadProducts(categoryToken = null) {
-  fetch("products.json")
+  fetch("src/products.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Erro ao carregar os produtos.");
@@ -123,7 +130,7 @@ function loadProducts(categoryToken = null) {
       console.error("Erro ao carregar os produtos:", error);
     });
 }
-function sendEmail(event){
+function sendEmail(event) {
   event.preventDefault();
   const email = document.getElementById("email2").value;
   const res = document.getElementById("res2");
@@ -137,43 +144,65 @@ function sendEmail(event){
     return (erro.innerHTML = "Preencha o campo email");
   }
 }
+
 function sendForm(event) {
   event.preventDefault();
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("msg").value;
+
+  
+  const fields = {
+    firstName: document.getElementById("firstName"),
+    lastName: document.getElementById("lastName"),
+    email: document.getElementById("email"),
+    message: document.getElementById("msg"),
+    check: document.getElementById("check"),
+  };
+
+  const errors = {
+    firstName: document.getElementById("erroFirstName"),
+    lastName: document.getElementById("erroLastName"),
+    email: document.getElementById("erroEmail"),
+    message: document.getElementById("erroMsg"),
+    check: document.getElementById("erroCheck"),
+  };
+
   const res = document.getElementById("res");
-  const erro = document.getElementById("erro");
 
-  if (firstName && lastName && email && message) {
-    erro.innerHTML = "";
-    return (res.innerHTML = "Mensagem enviada com sucesso!");
+  
+  function validateField(field, errorElement, errorMessage) {
+    if (!field || !errorElement) return false; 
+    if (!field.value.trim()) {
+      errorElement.innerHTML = errorMessage;
+      return false;
+    } else {
+      errorElement.innerHTML = "";
+      return true;
+    }
   }
 
-  if (!firstName) {
+  
+  const isValid = {
+    firstName: validateField(fields.firstName, errors.firstName, "First Name is required"),
+    lastName: validateField(fields.lastName, errors.lastName, "Last Name is required"),
+    email: validateField(fields.email, errors.email, "Email is required"),
+    message: validateField(fields.message, errors.message, "Message is required"),
+    check: fields.check.checked 
+  };
+
+  
+  if (!fields.check.checked) {
+    errors.check.innerHTML = "Accept the terms and conditions";
+    isValid.check = false;
+  } else {
+    errors.check.innerHTML = "";
+  }
+
+  
+  if (!Object.values(isValid).every(Boolean)) {
     res.innerHTML = "";
-    return (erro.innerHTML = "Preencha o campo First Name");
+    return;
   }
 
-  if (!lastName) {
-    res.innerHTML = "";
-    return (erro.innerHTML = "Preencha o campo Last Name");
-  }
-  if (!email) {
-    res.innerHTML = "";
-    return (erro.innerHTML = "Preencha o campo email");
-  }
-
-  if (!message) {
-    res.innerHTML = "";
-    return (erro.innerHTML = "Preencha o campo message");
-  }
-
-
-if(!firstName && !lastName && !email && !message){
-  erro.innerHTML = "";
-  return (res.innerHTML = "Preencha os campos");
+  
+  res.innerHTML = "Form successfully submitted!";
 }
 
-}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style.css">
   <link rel="shortcut icon" href="img/patinhas.png" type="image/x-icon">
   <title>Paws n'Play</title>
 </head>
@@ -19,7 +19,7 @@
         </div>
         <nav>
           <img src="img/menu.png" id="menuH" width="24px" height="24px" alt="">
-          <ul class="">
+          <ul id="navMenu" >
             <li class="dropdown">
               <p>Shop <img src="img/arrowD.png" width="20px" height="20px" alt=""></p>
               <ul class="dropdown-content">
@@ -69,7 +69,7 @@
     </div>
   </section>
 
-   <main>
+  <main>
     <section id="shop">
       <div class="shopHeader">
         <div class="titulo">
@@ -289,27 +289,32 @@
             <div>
               <label for="">Firts Name</label>
               <input name="firstName" id="firstName" placeholder="firts name" type="text" />
+              <p class="erro" id="erroFirstName"></p>
             </div>
             <div>
               <label for="">Last Name</label>
               <input name="lastName" id="lastName" placeholder="last name" type="text" />
+              <p class="erro" id="erroLastName"></p>
             </div>
           </div>
 
           <div class="divEmail">
             <label for="">Email</label>
             <input type="email" id="email" name="email" />
+            <p class="erro" id="erroEmail"></p>
           </div>
           <div class="msgTextArea">
             <label for="">Message</label>
             <textarea name="msg" id="msg"></textarea>
+            <p class="erro" id="erroMsg"></p>
           </div>
           <div class="Confirm">
             <input type="checkbox" name="" id="check" />
             <label for="">You agree to our friendly privacy policy.</label>
           </div>
+
           <p id="res"></p>
-          <p id="erro"></p>
+          <p class="erro" id="erroCheck"></p>
           <button type="submit">Send Menssage</button>
         </form>
         <div class="containerInformation">
@@ -352,9 +357,9 @@
         <p class="titleNew">Join our newsletter</p>
         <p class="sub">Be the first to receive latest updates on promo, sales and offers</p>
       </div>
-      <form onsubmit="sendEmail(event); return false;" class="formEmail" >
+      <form onsubmit="sendEmail(event); return false;" class="formEmail">
         <div>
-          <input type="email" id="email2"  placeholder="Enter your email">
+          <input type="email" id="email2" placeholder="Enter your email">
           <input type="submit" value="Subscribe">
         </div>
         <p id="res2"></p>
@@ -412,7 +417,7 @@
         </div>
       </nav>
     </div>
-    
+
     <div class="final">
       <div>
         <p>© 2024 Paws n’ Play. All rights reserved.</p>
@@ -427,7 +432,7 @@
       </div>
     </div>
   </footer>
-  <script src=" script.js"></script>
+  <script src=" src/script.js"></script>
 </body>
 
 </html>
